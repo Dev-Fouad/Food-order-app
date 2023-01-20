@@ -1,38 +1,50 @@
+import Card from '../UI/Card';
+import MealItem from './MealItem/MealItem';
 import classes from './AvailableMeals.module.css';
 
 const DUMMY_MEALS = [
   {
     id: 'm1',
-    name: 'Bread and beans',
-    description: 'Ewagon yin',
+    name: 'Sushi',
+    description: 'Finest fish and veggies',
     price: 22.99,
   },
   {
     id: 'm2',
-    name: 'Spaghetti and turkey',
-    description: 'A rick kid specialty!',
+    name: 'Schnitzel',
+    description: 'A german specialty!',
     price: 16.5,
   },
   {
     id: 'm3',
-    name: 'Rice and Burger',
+    name: 'Barbecue Burger',
     description: 'American, raw, meaty',
     price: 12.99,
   },
   {
     id: 'm4',
-    name: 'Chicken Fries',
+    name: 'Green Bowl',
     description: 'Healthy...and green...',
     price: 18.99,
   },
 ];
 
 const AvailableMeals = () => {
-  const mealsList = DUMMY_MEALS.map((meal) => <li>{meal.name}</li>);
+  const mealsList = DUMMY_MEALS.map((meal) => (
+    <MealItem
+      id={meal.id}
+      key={meal.id}
+      name={meal.name}
+      description={meal.description}
+      price={meal.price}
+    />
+  ));
 
   return (
     <section className={classes.meals}>
-      <ul>{mealsList}</ul>
+      <Card>
+        <ul>{mealsList}</ul>
+      </Card>
     </section>
   );
 };

@@ -5,13 +5,13 @@ import classes from './AvailableMeals.module.css';
 const DUMMY_MEALS = [
   {
     id: 'm1',
-    name: 'Beans and Yam',
+    name: 'Sushi',
     description: 'Finest fish and veggies',
     price: 22.99,
   },
   {
     id: 'm2',
-    name: 'Rice and Stew',
+    name: 'Schnitzel',
     description: 'A german specialty!',
     price: 16.5,
   },
@@ -30,7 +30,7 @@ const DUMMY_MEALS = [
 ];
 
 const AvailableMeals = () => {
-  const mealsList = DUMMY_MEALS.map((meal) => 
+  const mealsList = DUMMY_MEALS.map((meal) => (
     <MealItem
       id={meal.id}
       key={meal.id}
@@ -38,7 +38,7 @@ const AvailableMeals = () => {
       description={meal.description}
       price={meal.price}
     />
-);
+  ));
 
   return (
     <section className={classes.meals}>

@@ -11,9 +11,13 @@ function App() {
     setCartIsShown(true)
   }
 
+  function deletecarthandler (){
+    setCartIsShown(false)
+  }
+
   return (
     <Fragment>
-      {cartisShown  && <Cart  />}
+      {cartisShown  && <Cart  deletecart={deletecarthandler}/>}
       <Header showcart={showcarthandler}/>
       <main>
         <Meals />

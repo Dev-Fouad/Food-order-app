@@ -16,7 +16,7 @@ const Cart = (props) => {
   };
 
   const cartItemAddHandler = (item) => {
-    cartCtx.addItem({ ...item, amount: 1 });
+    cartCtx.addItem({...item, amount: 1});
   };
 
   const cartItems = (
@@ -35,7 +35,7 @@ const Cart = (props) => {
   );
 
   return (
-    <Modal deletecart={props.onClose}>
+    <Modal onClose={props.onClose}>
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>

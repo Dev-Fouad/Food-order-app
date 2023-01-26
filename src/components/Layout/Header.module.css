@@ -27,3 +27,12 @@
   object-fit: cover;
   transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
 }
+
+@media (max-width: 768px) {
+  .header {
+
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 0;
+  }
+}

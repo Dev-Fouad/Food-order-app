@@ -19,13 +19,13 @@ const DUMMY_MEALS = [
     id: 'm3',
     name: 'Yam and Egg',
     description: 'American meaty',
-    price: 12.99,
+    price: 5000,
   },
   {
     id: 'm4',
-    name: 'Green Bowl',
+    name: 'Custard And Moi-Moi',
     description: 'Healthy...and green...',
-    price: 18.99,
+    price: 2000,
   },
 ];
 

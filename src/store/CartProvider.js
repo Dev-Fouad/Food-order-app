@@ -68,7 +68,7 @@ const CartProvider = (props) => {
   const removeItemFromCartHandler = (id) => {
     dispatchCartAction({ type: 'REMOVE', id: id });
   };
-
+ 
   const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
@@ -84,4 +84,3 @@ const CartProvider = (props) => {
 };
 
 export default CartProvider;
- 
